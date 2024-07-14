@@ -38,19 +38,36 @@ namespace GeneralChat.Infrastructure.Persistence.Repositories
                 Result.Fail<User>("User credentials are incorrects");
         }
 
-        public Task<Result<bool>> Register(User user)
+        public async Task<Result<bool>> Register(User user)
         {
-            throw new NotImplementedException();
+            var ValidationResult = await ValidateIfUserExist(user.Email);
+            if (ValidationResult)
+                return Result.Fail<bool>("Couldn't created a new user, the user already exist");
+
+            var ResultUser = await _context.User.AddAsync(user);
+            var ResultProccess = await _context.SaveChangesAsync();
+
+            return ResultProccess > 0 && ResultUser.Entity is not null ?
+                Result.Ok(true) :
+                Result.Fail<bool>("An error ocurred, user couldn't be created");
         }
 
-        public Task<Result<ICollection<User>>> GetUsers()
+        public async Task<Result<ICollection<User>>> GetUsers()
         {
-            throw new NotImplementedException();
+            var Users = await _context.User.ToListAsync();
+
+            return Users.Any() ?
+                Result.Ok((ICollection<User>)(Users)) :
+                Result.Fail<ICollection<User>>("Theren't users to list");
         }
 
-        public Task<Result<User>> GetUserById(int id)
+        public async Task<Result<User>> GetUserById(int id)
         {
-            throw new NotImplementedException();
+            var User = await _context.User.FindAsync(id);
+
+            return User is not null ?
+                Result.Ok(User) :
+                Result.Fail<User>("Theren't user with that id");
         }
     }
 }

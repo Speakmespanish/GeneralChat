@@ -5,7 +5,8 @@ namespace GeneralChat.Core.Application.Interfaces.Repositories
 {
     public interface ICommentRepository
     {
-        public Result<ICollection<Comment>> GetComments ();
-        public Result<bool> DeleteComment (int id);
+        public Task<Result<ICollection<Comment>>> GetComments ();
+        public Task<Result<bool>> DeleteComment (int id);
+        public Task<Result<bool>> CreateComment (Comment comment);
     }
 }
