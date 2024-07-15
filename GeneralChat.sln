@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{84590FB7-0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{09F15F91-775A-4B72-AB5E-5F2AD726C940}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralChat.UI.Presentation", "GeneralChat.UI.Presentation\GeneralChat.UI.Presentation.csproj", "{EFA5EDC9-C260-4375-9C02-B0F2F245F5B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneralChat.UI.Presentation", "GeneralChat.UI.Presentation\GeneralChat.UI.Presentation.csproj", "{EFA5EDC9-C260-4375-9C02-B0F2F245F5B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralChat.Infrastructure.Persistence", "GeneralChat.Infrastructure.Persistence\GeneralChat.Infrastructure.Persistence.csproj", "{42841AFA-BA9C-40DB-BAE0-52692C260C6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneralChat.Infrastructure.Persistence", "GeneralChat.Infrastructure.Persistence\GeneralChat.Infrastructure.Persistence.csproj", "{42841AFA-BA9C-40DB-BAE0-52692C260C6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralChat.Core.Domain", "GeneralChat.Core.Domain\GeneralChat.Core.Domain.csproj", "{D5ABDCFC-8F3E-4F7F-9A33-77A2010488E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneralChat.Core.Domain", "GeneralChat.Core.Domain\GeneralChat.Core.Domain.csproj", "{D5ABDCFC-8F3E-4F7F-9A33-77A2010488E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralChat.Core.Application", "GeneralChat.Core.Application\GeneralChat.Core.Application.csproj", "{3CEFFE33-37F7-4495-AB29-4B39C920BA24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneralChat.Core.Application", "GeneralChat.Core.Application\GeneralChat.Core.Application.csproj", "{3CEFFE33-37F7-4495-AB29-4B39C920BA24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

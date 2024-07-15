@@ -1,0 +1,16 @@
+﻿namespace GeneralChat.UI.Presentation.Views.Chat
+{
+@{
+    ViewData["Title"] = "Chat";
+}
+
+<h2>Chat Room</h2>
+<div id="chat-box">
+    <!-- Chat messages will be loaded here -->
+</div>
+<form id="chat-form" onsubmit="sendMessage(event)">
+    <input type="text" id="message" placeholder="Type your message here...">
+    <button type="submit">Send</button>
+</form>
+
+}
